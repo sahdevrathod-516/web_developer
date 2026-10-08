@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            Result
+        </title>
+        <style>
+            body{
+                background-color: rgb(26,43,76);
+                display: flex;
+                justify-content: center;
+                color:rgb(94,114,143);
+                text-shadow: 3px 3px 30px rgba(129, 99, 0, 0.726);
+            }
+
+            input{
+               margin: 5px;
+               height: 20px;
+               border-radius: 30px;
+               border: none;
+               transition: 2s;
+            }
+            input:hover{
+                transform:rotate3d(1,1,1,4deg);
+            }
+
+            button{
+            height: 25px;
+            width: 400px;
+            border-radius: 30px;
+            border: none; 
+            transition: 2s;
+            }
+            button:hover{
+                background-color: rgb(138,161,142);
+                transform: scale(1.05);
+            }
+            h1{
+                text-align: center;
+                 transition: 2s;
+            }
+            h1:hover{
+               
+                transform:scale(1.03);
+            }
+            #serch{
+                border: none;
+            }
+            #main{
+                
+                text-align: center;
+                padding: 10px;
+                width: 500px;
+                background-color: rgb(255, 243, 228);
+                border-radius:5px;
+                transition: 1.1s;
+            }
+            #main:hover{
+                transform:rotate3d(1,1,1,360deg);
+                background-color: rgba(255, 226, 188, 0.917);
+                box-shadow:5px 5px 900px rgb(255, 217, 145)
+            }
+            #sub1,#sub2,#sub3{
+                width:50px;
+                height: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div id="main">
+         <h1>Student Result</h1>     
+            <form id="studentForm">
+               Name:  <input type="text" placeholder="Enter your name" id="name"><span id="nameError"></span><br>
+               Roll Number: <input type="number" placeholder="Enetr your rollnumber" id="rollNumber"><span id="rollNumberError"></span><br>
+               Mark:<input type="number" placeholder="sub1" id="sub1"><span id="sub1Error"></span>
+                <input type="number" placeholder="sub2"id="sub2"><span id="sub2Error"></span>
+                <input type="number" placeholder="sub3" id="sub3"><span id="sub3Error"></span><br>
+                <button type="submit">submit</button>
+            </form>
+       
+                <input type="text" placeholder="Serch student" id="serch"><br>
+                
+             
+            <h3>students Result:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rollnumber</th>
+                        <th>Name</th>
+                        <th>subject1</th>
+                        <th>subject2</th>
+                        <th>subject3</th>
+                        <th>total</th>
+                        <th>persntage</th>
+                    </tr>
+                    </thead>
+                <tbody id="studentTable">      
+                </tbody>    
+                 
+            </table>
+        </div>
+        <script src="result.js"></script>
+    </body>
+</html>
